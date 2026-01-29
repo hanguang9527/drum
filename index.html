@@ -115,7 +115,7 @@
   .tabs {
     position: relative;
     display: flex;
-    min-height: 250;
+    min-height: 500px;
     border-radius: 10px 10px 0px 0px;
     overflow: hidden;
   }
@@ -147,7 +147,7 @@
     bottom: 0;
     right: 0px;
     /* clear the tab labels */
-    top: 25;
+    top: 25px;
     padding: 0px;
     border-radius: 0px 0px 0px 0px;
     background: #ffffff;
@@ -293,15 +293,14 @@
         </p>
       </div>
       <p class="h3">Case Study</p>
-      <p class='text-justify'>In this section, we present additional case studies to further demonstrate the robustness
-        and generalization capability of Hi-Drum. These examples cover a diverse range of musical contexts, including
-        various BPMs, genres, and drum timbres. By comparing Hi-Drum with the Ground Truth and the baseline OaF Drums,
-        we highlight Hi-Drum's superior performance in capturing rapid onsets, maintaining rhythmic consistency, and
-        preserving global musical structures across different complex scenarios.
+      <p class='text-justify'>In this section, we present case studies across diverse genres and BPMs to demonstrate
+        Hi-Drum's robustness. By integrating a Hierarchical Drum Module (HDM) with an LLM, Hi-Drum captures
+        coarse-to-fine rhythmic features. Comparisons with Ground Truth and OaF Drums highlight its superior ability to
+        model local variations and global structural consistency in complex scenarios.
       </p>
 
       <p class='text-justify'></p>
-      <p class="h4"><b style="color:#6c06c0;">[Demo-01]</b> <b>142 Gospel</b></p>
+      <p class="h4"><b style="color:#6c06c0;">[Demo-01]</b> </p>
       <ul>
         <li><b>Genre:</b> Gospel</li>
         <li><b>BPM:</b> 120</li>
@@ -313,10 +312,15 @@
           <div class="tabby-content">
             <midi-visualizer src="demo/142_gospel_120_beat_4-4_36/Ground_Truth.mid" id="demo_1_gt-visualizer">
             </midi-visualizer>
-            <midi-player sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus"
-              src="demo/142_gospel_120_beat_4-4_36/Ground_Truth.mid" visualizer="#demo_1_gt-visualizer"
+            <midi-player src="demo/142_gospel_120_beat_4-4_36/Ground_Truth.mid" visualizer="#demo_1_gt-visualizer"
               id="demo_1_gt-player">
             </midi-player>
+            <audio id="demo_1_gt-audio">
+              <source src="demo/142_gospel_120_beat_4-4_36/Ground_Truth.mp3" type="audio/mpeg">
+              <source src="demo/142_gospel_120_beat_4-4_36/Ground_Truth.wav" type="audio/wav">
+              <source src="demo/142_gospel_120_beat_4-4_36/Ground_Truth.flac" type="audio/flac">
+              Your browser does not support the audio tag.
+            </audio>
           </div>
         </div>
 
@@ -326,10 +330,15 @@
           <div class="tabby-content">
             <midi-visualizer src="demo/142_gospel_120_beat_4-4_36/Hi-Drum.mid" id="demo_1_hidrum-visualizer">
             </midi-visualizer>
-            <midi-player sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus"
-              src="demo/142_gospel_120_beat_4-4_36/Hi-Drum.mid" visualizer="#demo_1_hidrum-visualizer"
+            <midi-player src="demo/142_gospel_120_beat_4-4_36/Hi-Drum.mid" visualizer="#demo_1_hidrum-visualizer"
               id="demo_1_hidrum-player">
             </midi-player>
+            <audio id="demo_1_hidrum-audio">
+              <source src="demo/142_gospel_120_beat_4-4_36/Hi-Drum.mp3" type="audio/mpeg">
+              <source src="demo/142_gospel_120_beat_4-4_36/Hi-Drum.wav" type="audio/wav">
+              <source src="demo/142_gospel_120_beat_4-4_36/Hi-Drum.flac" type="audio/flac">
+              Your browser does not support the audio tag.
+            </audio>
           </div>
         </div>
 
@@ -339,16 +348,21 @@
           <div class="tabby-content">
             <midi-visualizer src="demo/142_gospel_120_beat_4-4_36/OaF_Drums.mid" id="demo_1_oaf-visualizer">
             </midi-visualizer>
-            <midi-player sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus"
-              src="demo/142_gospel_120_beat_4-4_36/OaF_Drums.mid" visualizer="#demo_1_oaf-visualizer"
+            <midi-player src="demo/142_gospel_120_beat_4-4_36/OaF_Drums.mid" visualizer="#demo_1_oaf-visualizer"
               id="demo_1_oaf-player">
             </midi-player>
+            <audio id="demo_1_oaf-audio">
+              <source src="demo/142_gospel_120_beat_4-4_36/OaF_Drums.mp3" type="audio/mpeg">
+              <source src="demo/142_gospel_120_beat_4-4_36/OaF_Drums.wav" type="audio/wav">
+              <source src="demo/142_gospel_120_beat_4-4_36/OaF_Drums.flac" type="audio/flac">
+              Your browser does not support the audio tag.
+            </audio>
           </div>
         </div>
       </div>
 
       <p class='text-justify'></p>
-      <p class="h4"><b style="color:#6c06c0;">[Demo-02]</b> <b>15 Jazz</b></p>
+      <p class="h4"><b style="color:#6c06c0;">[Demo-02]</b></p>
       <ul>
         <li><b>Genre:</b> Jazz</li>
         <li><b>BPM:</b> 120</li>
@@ -360,10 +374,15 @@
           <div class="tabby-content">
             <midi-visualizer src="demo/15_jazz_120_beat_4-4_11/Ground_Truth.mid" id="demo_2_gt-visualizer">
             </midi-visualizer>
-            <midi-player sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus"
-              src="demo/15_jazz_120_beat_4-4_11/Ground_Truth.mid" visualizer="#demo_2_gt-visualizer"
+            <midi-player src="demo/15_jazz_120_beat_4-4_11/Ground_Truth.mid" visualizer="#demo_2_gt-visualizer"
               id="demo_2_gt-player">
             </midi-player>
+            <audio id="demo_2_gt-audio">
+              <source src="demo/15_jazz_120_beat_4-4_11/Ground_Truth.mp3" type="audio/mpeg">
+              <source src="demo/15_jazz_120_beat_4-4_11/Ground_Truth.wav" type="audio/wav">
+              <source src="demo/15_jazz_120_beat_4-4_11/Ground_Truth.flac" type="audio/flac">
+              Your browser does not support the audio tag.
+            </audio>
           </div>
         </div>
 
@@ -373,10 +392,15 @@
           <div class="tabby-content">
             <midi-visualizer src="demo/15_jazz_120_beat_4-4_11/Hi-Drum.mid" id="demo_2_hidrum-visualizer">
             </midi-visualizer>
-            <midi-player sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus"
-              src="demo/15_jazz_120_beat_4-4_11/Hi-Drum.mid" visualizer="#demo_2_hidrum-visualizer"
+            <midi-player src="demo/15_jazz_120_beat_4-4_11/Hi-Drum.mid" visualizer="#demo_2_hidrum-visualizer"
               id="demo_2_hidrum-player">
             </midi-player>
+            <audio id="demo_2_hidrum-audio">
+              <source src="demo/15_jazz_120_beat_4-4_11/Hi-Drum.mp3" type="audio/mpeg">
+              <source src="demo/15_jazz_120_beat_4-4_11/Hi-Drum.wav" type="audio/wav">
+              <source src="demo/15_jazz_120_beat_4-4_11/Hi-Drum.flac" type="audio/flac">
+              Your browser does not support the audio tag.
+            </audio>
           </div>
         </div>
 
@@ -386,16 +410,21 @@
           <div class="tabby-content">
             <midi-visualizer src="demo/15_jazz_120_beat_4-4_11/OaF_Drums.mid" id="demo_2_oaf-visualizer">
             </midi-visualizer>
-            <midi-player sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus"
-              src="demo/15_jazz_120_beat_4-4_11/OaF_Drums.mid" visualizer="#demo_2_oaf-visualizer"
+            <midi-player src="demo/15_jazz_120_beat_4-4_11/OaF_Drums.mid" visualizer="#demo_2_oaf-visualizer"
               id="demo_2_oaf-player">
             </midi-player>
+            <audio id="demo_2_oaf-audio">
+              <source src="demo/15_jazz_120_beat_4-4_11/OaF_Drums.mp3" type="audio/mpeg">
+              <source src="demo/15_jazz_120_beat_4-4_11/OaF_Drums.wav" type="audio/wav">
+              <source src="demo/15_jazz_120_beat_4-4_11/OaF_Drums.flac" type="audio/flac">
+              Your browser does not support the audio tag.
+            </audio>
           </div>
         </div>
       </div>
 
       <p class='text-justify'></p>
-      <p class="h4"><b style="color:#6c06c0;">[Demo-03]</b> <b>39 Jazz</b></p>
+      <p class="h4"><b style="color:#6c06c0;">[Demo-03]</b></p>
       <ul>
         <li><b>Genre:</b> Jazz</li>
         <li><b>BPM:</b> 120</li>
@@ -407,10 +436,15 @@
           <div class="tabby-content">
             <midi-visualizer src="demo/39_jazz_120_beat_4-4_13/Ground_Truth.mid" id="demo_3_gt-visualizer">
             </midi-visualizer>
-            <midi-player sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus"
-              src="demo/39_jazz_120_beat_4-4_13/Ground_Truth.mid" visualizer="#demo_3_gt-visualizer"
+            <midi-player src="demo/39_jazz_120_beat_4-4_13/Ground_Truth.mid" visualizer="#demo_3_gt-visualizer"
               id="demo_3_gt-player">
             </midi-player>
+            <audio id="demo_3_gt-audio">
+              <source src="demo/39_jazz_120_beat_4-4_13/Ground_Truth.mp3" type="audio/mpeg">
+              <source src="demo/39_jazz_120_beat_4-4_13/Ground_Truth.wav" type="audio/wav">
+              <source src="demo/39_jazz_120_beat_4-4_13/Ground_Truth.flac" type="audio/flac">
+              Your browser does not support the audio tag.
+            </audio>
           </div>
         </div>
 
@@ -420,10 +454,15 @@
           <div class="tabby-content">
             <midi-visualizer src="demo/39_jazz_120_beat_4-4_13/Hi-Drum.mid" id="demo_3_hidrum-visualizer">
             </midi-visualizer>
-            <midi-player sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus"
-              src="demo/39_jazz_120_beat_4-4_13/Hi-Drum.mid" visualizer="#demo_3_hidrum-visualizer"
+            <midi-player src="demo/39_jazz_120_beat_4-4_13/Hi-Drum.mid" visualizer="#demo_3_hidrum-visualizer"
               id="demo_3_hidrum-player">
             </midi-player>
+            <audio id="demo_3_hidrum-audio">
+              <source src="demo/39_jazz_120_beat_4-4_13/Hi-Drum.mp3" type="audio/mpeg">
+              <source src="demo/39_jazz_120_beat_4-4_13/Hi-Drum.wav" type="audio/wav">
+              <source src="demo/39_jazz_120_beat_4-4_13/Hi-Drum.flac" type="audio/flac">
+              Your browser does not support the audio tag.
+            </audio>
           </div>
         </div>
 
@@ -433,14 +472,18 @@
           <div class="tabby-content">
             <midi-visualizer src="demo/39_jazz_120_beat_4-4_13/OaF_Drums.mid" id="demo_3_oaf-visualizer">
             </midi-visualizer>
-            <midi-player sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus"
-              src="demo/39_jazz_120_beat_4-4_13/OaF_Drums.mid" visualizer="#demo_3_oaf-visualizer"
+            <midi-player src="demo/39_jazz_120_beat_4-4_13/OaF_Drums.mid" visualizer="#demo_3_oaf-visualizer"
               id="demo_3_oaf-player">
             </midi-player>
+            <audio id="demo_3_oaf-audio">
+              <source src="demo/39_jazz_120_beat_4-4_13/OaF_Drums.mp3" type="audio/mpeg">
+              <source src="demo/39_jazz_120_beat_4-4_13/OaF_Drums.wav" type="audio/wav">
+              <source src="demo/39_jazz_120_beat_4-4_13/OaF_Drums.flac" type="audio/flac">
+              Your browser does not support the audio tag.
+            </audio>
           </div>
         </div>
       </div>
-
 
     </div>
 
@@ -486,52 +529,50 @@
     for (i_vis = 0; i_vis < visualizers.length; i_vis++) {
       visualizers[i_vis].config = {
         noteHeight: 8,
-        pixelsPerTimeStep: 30,
-        minPitch: 30,
-        maxPitch: 90,
+        pixelsPerTimeStep: 60,
+        minPitch: 35,
+        maxPitch: 60,
       };
     }
 
 
     async function onDomReady() {
       const players = document.getElementsByTagName('midi-player');
+      const audios = document.getElementsByTagName('audio');
 
       for (let i = 0; i < players.length; i++) {
         const player = players[i];
-        // Find the corresponding audio element within the same container
-        const audio = player.parentElement.querySelector('audio');
+        const audio = audios[i]
 
-        if (audio) {
-          player.addEventListener('load', function () {
-            const SeekBar = player.shadowRoot.querySelector('.seek-bar');
-            SeekBar.addEventListener('input', function () {
-              audio.pause();
-            });
-            SeekBar.addEventListener('change', function () {
-              audio.currentTime = player.currentTime;
-              if (player.playing) {
-                const playPromise = audio.play();
-                if (playPromise !== undefined) {
-                  playPromise.catch(error => {
-                    console.log("Audio play prevented or failed (likely missing file):", error);
-                  });
-                }
-              }
-            });
-          })
-          player.addEventListener('start', function () {
-            audio.currentTime = player.currentTime;
-            const playPromise = audio.play();
-            if (playPromise !== undefined) {
-              playPromise.catch(error => {
-                console.log("Audio play prevented or failed (likely missing file):", error);
-              });
-            }
-          });
-          player.addEventListener('stop', function () {
+        player.addEventListener('load', function () {
+          const SeekBar = player.shadowRoot.querySelector('.seek-bar');
+          SeekBar.addEventListener('input', function () {
             audio.pause();
           });
-        }
+          SeekBar.addEventListener('change', function () {
+            audio.currentTime = player.currentTime;
+            if (player.playing) {
+              const playPromise = audio.play();
+              if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                  console.log("Audio play prevented or failed (likely missing file):", error);
+                });
+              }
+            }
+          });
+        })
+        player.addEventListener('start', function () {
+          audio.currentTime = player.currentTime;
+          const playPromise = audio.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(error => {
+              console.log("Audio play prevented or failed (likely missing file):", error);
+            });
+          }
+        });
+        player.addEventListener('stop', function () {
+          audio.pause();
+        });
       }
     }
     document.addEventListener("DOMContentLoaded", onDomReady, false);
